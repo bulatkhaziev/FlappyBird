@@ -9,11 +9,15 @@ namespace FlappyBird
         public List<int[]> Walls = new List<int[]>(); // Коллекция стен
         public static int WallPrintDelay = 3000; // Задержка перед добавлением новой стены
         
-        public void Print()
+        public void Print(Thread thread)
         {
+            // Проверка состояния потока. Поток не должен быть запущен, иначе будет эксепшн
+            if (thread.ThreadState != ThreadState.WaitSleepJoin)
+                return;
+
             // Обновление координат
             Update();
-            // Отрисовка
+            // Отрисовка стен
             foreach (var wall in Walls)
             {
                 for(int i = 0; i < wall[2]; i++)
@@ -56,7 +60,7 @@ namespace FlappyBird
                 for(int i = 1; i < 2; i++)
                 {
                     // Высота стены
-                    int WallHeight = random.Next(Map.BordersSize[1] / 2);
+                    int WallHeight = random.Next(Map.BordersSize[1] / 3 * 2);
                     
                     // Координаты
                     int X = Map.BordersOffset[0] + Map.BordersSize[0] - 2;

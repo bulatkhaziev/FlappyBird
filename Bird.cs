@@ -9,7 +9,7 @@ namespace FlappyBird
         // Начальные координаты птицы
         public static int[] StartCoords = { 10 + Map.BordersOffset[0], Map.BordersOffset[1] + Map.BordersSize[1] / 3 };
         // Модель птицы
-        public static string Model = "X";
+        public static string Model = "O";
         // Высота прыжка птицы в пикселях
         public static int JumpHeight = 4; // bird jump height in pixels
 
@@ -96,6 +96,9 @@ namespace FlappyBird
         // Чтение лучшего счета с файла
         public void ReadHighScore()
         {
+            if (!File.Exists("highscore.txt"))
+                return;
+
             string text = File.ReadAllText("highscore.txt");
             HighScore = text.Length > 0 ? int.Parse(text) : 0;
         }

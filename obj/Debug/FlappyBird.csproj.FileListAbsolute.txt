@@ -5,3 +5,10 @@ c:\users\булат\source\repos\FlappyBird\FlappyBird\obj\Debug\FlappyBird.cspr
 c:\users\булат\source\repos\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.CoreCompileInputs.cache
 c:\users\булат\source\repos\FlappyBird\FlappyBird\obj\Debug\FlappyBird.exe
 c:\users\булат\source\repos\FlappyBird\FlappyBird\obj\Debug\FlappyBird.pdb
+C:\Users\Snack\Documents\GitHub\FlappyBird\bin\Debug\FlappyBird.exe.config
+C:\Users\Snack\Documents\GitHub\FlappyBird\bin\Debug\FlappyBird.exe
+C:\Users\Snack\Documents\GitHub\FlappyBird\bin\Debug\FlappyBird.pdb
+C:\Users\Snack\Documents\GitHub\FlappyBird\obj\Debug\FlappyBird.csprojResolveAssemblyReference.cache
+C:\Users\Snack\Documents\GitHub\FlappyBird\obj\Debug\FlappyBird.csproj.CoreCompileInputs.cache
+C:\Users\Snack\Documents\GitHub\FlappyBird\obj\Debug\FlappyBird.exe
+C:\Users\Snack\Documents\GitHub\FlappyBird\obj\Debug\FlappyBird.pdb

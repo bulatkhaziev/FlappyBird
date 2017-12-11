@@ -7,7 +7,7 @@ namespace FlappyBird
     class Game
     {
         // Задержка перед обновлением цикла
-        public static int UpdateDelay = 0;
+        public static int UpdateDelay = 100;
         
         public static void Init()
         {
@@ -35,9 +35,10 @@ namespace FlappyBird
                 }
                 // Обновляем координаты птицы, преград и отрисовываем карту заново.
                 bird.Update();
-                wall.Print();
-                Map.Print(bird);
                 
+                Map.Print(bird);
+                wall.Print(wallsThread);
+
                 Thread.Sleep(UpdateDelay);
             }
             // Завершаем игру
@@ -46,15 +47,20 @@ namespace FlappyBird
 
         public static void Destruct(Bird bird)
         {
+            bird.SaveHighScore();
+
             Console.Clear();
             Console.WriteLine("Score: {0}. Do you want to play again? Y/N", bird.CurrentScore);
 
-            char answer = Console.ReadLine()[0];
+            string input = Console.ReadLine();
+
+            if (input.Length == 0)
+                return;
+
+            char answer = input[0];
 
             if(char.Equals(char.ToLower(answer), 'y'))
             {
-                bird.SaveHighScore();
-
                 Console.Clear();
                 Init();
             }
