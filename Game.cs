@@ -1,4 +1,5 @@
-﻿using System;
+// Game.cs. Написал: Хазиев Булат
+using System;
 using System.Threading;
 using System.Diagnostics;
 
