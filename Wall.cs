@@ -1,4 +1,5 @@
-﻿using System;
+// Wall.cs. Написал: Ахметзянов Алмаз
+using System;
 using System.Threading;
 using System.Collections.Generic;
 
