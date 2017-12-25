@@ -10,7 +10,7 @@ namespace FlappyBird
         public static int[] BordersOffset = { 1, 4 };
         public static int[] UserBarOffset = { 5, 2 };
 
-        public static void Print(Bird bird)
+        public static void Print(Bird bird) // Вызов отрисовки
         {
             Console.CursorVisible = false;
             PrintBorders();
@@ -18,7 +18,7 @@ namespace FlappyBird
             PrintBird(bird);
         }
 
-        public static void PrintBorders()
+        public static void PrintBorders() // Отрисовка границ игрового поля
         {
             for(int X = 0; X < BordersSize[0]; X++)
             {
@@ -34,14 +34,14 @@ namespace FlappyBird
             }
         }
 
-        public static void PrintUserBar(Bird bird)
+        public static void PrintUserBar(Bird bird) // Отрисовка строки с рекордами
         {
             Console.SetCursorPosition(UserBarOffset[0], UserBarOffset[1]);
 
             Console.WriteLine("SCORE: {0} | HIGH SCORE: {1}", bird.CurrentScore, bird.HighScore);
         }
 
-        public static void PrintBird(Bird bird)
+        public static void PrintBird(Bird bird) // Отрисовка птицы
         {
             Console.SetCursorPosition(bird.CurrentCoords[0], bird.CurrentCoords[1]);
             
