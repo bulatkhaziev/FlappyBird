@@ -1,4 +1,5 @@
-﻿using System;
+// Map.cs. Написал: Ахметзянов Алмаз
+using System;
 
 namespace FlappyBird
 {
